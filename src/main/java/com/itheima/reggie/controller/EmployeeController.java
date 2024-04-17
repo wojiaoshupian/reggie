@@ -1,9 +1,9 @@
-package com.itheima.reggie.reggie_takeout.controller;
+package com.itheima.reggie.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.itheima.reggie.reggie_takeout.common.R;
-import com.itheima.reggie.reggie_takeout.entity.Employee;
-import com.itheima.reggie.reggie_takeout.service.EmployeeService;
+import com.itheima.reggie.common.R;
+import com.itheima.reggie.entity.Employee;
+import com.itheima.reggie.service.EmployeeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.DigestUtils;
@@ -30,7 +30,7 @@ public class EmployeeController {
      * @return
      */
     @PostMapping("/login")
-    public R<Employee> login(HttpServletRequest request,@RequestBody Employee employee){
+    public R<Employee> login(HttpServletRequest request, @RequestBody Employee employee){
 
         //1、将页面提交的密码password进行md5加密处理
         String password = employee.getPassword();

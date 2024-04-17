@@ -1,4 +1,4 @@
-package com.itheima.reggie.reggie_takeout.common;
+package com.itheima.reggie.common;
 
 import lombok.Data;
 import java.util.HashMap;
